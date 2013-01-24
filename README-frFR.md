@@ -92,7 +92,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
 * Utilisez deux **espaces** par niveau d'indentation. Pas de tabulation.
 
     ```Ruby
-    # bon
+    # bien
     def some_method
       do_something
     end
@@ -127,7 +127,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     e = M * c ** 2
 
-    # bon
+    # bien
     e = M * c**2
     ```
 
@@ -207,7 +207,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
           body: source.text)
     end
 
-    # bon
+    # bien
     def send_mail(source)
       Mailer.deliver(to: 'bob@example.com',
                      from: 'us@example.com',
@@ -222,7 +222,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais - combien y a-t-il de zéros?
     num = 1000000
 
-    # bon - bien plus simple à analyser pour le cerveau humain
+    # bien - bien plus simple à analyser pour le cerveau humain
     num = 1_000_000
     ```
 
@@ -259,7 +259,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       puts elem
     end
 
-    # bon
+    # bien
     arr.each { |elem| puts elem }
     ```
 
@@ -271,7 +271,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       # body omitted
     end
 
-    # bon
+    # bien
     if some_condition
       # body omitted
     end
@@ -284,7 +284,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     result = if some_condition then something else something_else end
 
-    # bon
+    # bien
     result = some_condition ? something : something_else
     ```
 
@@ -296,7 +296,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     some_condition ? (nested_condition ? nested_something : nested_something_else) : something_else
 
-    # bon
+    # bien
     if some_condition
       nested_condition ? nested_something : nested_something_else
     else
@@ -311,7 +311,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     result = if some_condition: something else something_else end
 
-    # bon
+    # bien
     result = some_condition ? something : something_else
     ```
 
@@ -347,7 +347,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       do_something
     end
 
-    # bon
+    # bien
     do_something if some_condition
 
     # alternative acceptable
@@ -361,7 +361,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     do_something if !some_condition
 
-    # bon
+    # bien
     do_something unless some_condition
 
     # alternative acceptable
@@ -379,7 +379,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       puts 'success'
     end
 
-    # bon
+    # bien
     if success?
       puts 'success'
     else
@@ -397,7 +397,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       # contenu omis
     end
 
-    # bon
+    # bien
     if x > 10
       # contenu omis
     end
@@ -417,7 +417,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       do_something
     end
 
-    # bon
+    # bien
     do_something while some_condition
     ```
 
@@ -427,7 +427,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     do_something while !some_condition
 
-    # bon
+    # bien
     do_something until some_condition
     ```
 
@@ -462,7 +462,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     ```Ruby
     names = ['Bozhidar', 'Steve', 'Sarah']
 
-    # bon
+    # bien
     names.each { |name| puts name }
 
     # mauvais
@@ -470,7 +470,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       puts name
     end
 
-    # bon
+    # bien
     names.select { |name| name.start_with?('S') }.map { |name| name.upcase }
 
     # mauvais
@@ -491,7 +491,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       return some_arr.size
     end
 
-    # bon
+    # bien
     def some_method(some_arr)
       some_arr.size
     end
@@ -509,7 +509,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       self.status == :verified
     end
 
-    # bon
+    # bien
     def ready?
       if last_reviewed_at > last_updated_at
         worker.update(content, options)
@@ -538,7 +538,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
         end
       end
 
-      # bon
+      # bien
       def do_something(params = {})
         unless params[:when] == :later
           output(options[:message])
@@ -556,7 +556,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       # do something...
     end
 
-    # bon
+    # bien
     def some_method(arg1 = :default, arg2 = nil, arg3 = [])
       # do something...
     end
@@ -573,7 +573,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     result = 1 - \
              2
 
-    # bon (mais toujours extrêmement moche)
+    # bien (mais toujours extrêmement moche)
     result = 1 \
              - 2
     ```
@@ -582,13 +582,13 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
   mais entourez l'assignement de parenthèses.
 
     ```Ruby
-    # bon - montre l'utilisation prévue de l'affectation
+    # bien - montre l'utilisation prévue de l'affectation
     if (v = array.grep(/foo/)) ...
 
     # mauvais
     if v = array.grep(/foo/) ...
 
-    # bon également - montre l'utilisation prévue de l'affectation et la priorité est correcte.
+    # bien également - montre l'utilisation prévue de l'affectation et la priorité est correcte.
     if (v = self.next_value) == 'hello' ...
     ```
 
@@ -606,7 +606,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais - définirait enabled à true, même si elle valait false
     enabled ||= true
 
-    # bon
+    # bien
     enabled = true if enabled.nil?
     ```
 
@@ -620,7 +620,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     f (3 + 2) + 1
 
-    # bon
+    # bien
     f(3 + 2) + 1
     ```
 
@@ -637,7 +637,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     hash = { :one => 1, :two => 2 }
 
-    # bon
+    # bien
     hash = { one: 1, two: 2 }
     ```
 
@@ -648,7 +648,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     lambda = lambda { |a, b| a + b }
     lambda.call(1, 2)
 
-    # bon
+    # bien
     lambda = ->(a, b) { a + b }
     lambda.(1, 2)
     ```
@@ -659,7 +659,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     result = hash.map { |k, v| v + 1 }
 
-    # bon
+    # bien
     result = hash.map { |_, v| v + 1 }
     ```
 
@@ -688,13 +688,13 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       end
     end
 
-    # bon
+    # bien
     class Person
       def update
       end
     end
 
-    # bon
+    # bien
     class Person
       def update!
       end
@@ -751,7 +751,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     all_songs = users.map(&:songs).flatten.uniq
 
-    # bon
+    # bien
     all_songs = users.flat_map(&:songs).uniq
     ```
 
@@ -869,7 +869,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       end
     end
 
-    # bon
+    # bien
     class Person
       attr_reader :first_name, :last_name
 
@@ -884,7 +884,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
   constructeur et operateurs de comparaison pour vous.
 
     ```Ruby
-    # bon
+    # bien
     class Person
       attr_reader :first_name, :last_name
 
@@ -934,7 +934,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       end
     end
 
-    # bon
+    # bien
     class Duck
       def speak
         puts 'Quack! Quack'
@@ -1007,7 +1007,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
         # contenu omis
       end
 
-      # bon
+      # bien
       def self.some_other_method
         # contenu omis
       end
@@ -1068,7 +1068,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       end
     end
 
-    # bon
+    # bien
     def foo
       # algorithme principal
     rescue
@@ -1093,7 +1093,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       # handle IOError
     end
 
-    # bon
+    # bien
     def with_io_error_handling
        yield
     rescue IOError
@@ -1136,7 +1136,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       puts 'Cannot divide by 0!'
     end
 
-    # bon
+    # bien
     if d.zero?
       puts 'Cannot divide by 0!'
     else
@@ -1157,7 +1157,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       # gestion d'exception
     end
 
-    # bon
+    # bien
     begin
       # un rescue par défaut intercepte les exceptions StandardError et non Exception,
       # contrairement à ce que pensent beaucoup de développeurs.
@@ -1165,7 +1165,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       # gestion d'exception
     end
 
-    # bon aussi
+    # bien aussi
     begin
       # une exception se produit ici
 
@@ -1188,7 +1188,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       # gestion d'exception
     end
 
-    # bon
+    # bien
     begin
       # du code
     rescue StandardError => e
@@ -1225,7 +1225,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     arr = Array.new
     hash = Hash.new
 
-    # bon
+    # bien
     arr = []
     hash = {}
     ```
@@ -1237,7 +1237,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     STATES = ['draft', 'open', 'closed']
 
-    # bon
+    # bien
     STATES = %w(draft open closed)
     ```
 
@@ -1259,7 +1259,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     hash = { 'one' => 1, 'two' => 2, 'three' => 3 }
 
-    # bon
+    # bien
     hash = { one: 1, two: 2, three: 3 }
     ```
 
@@ -1270,7 +1270,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     hash = { :one => 1, :two => 2, :three => 3 }
 
-    # bon
+    # bien
     hash = { one: 1, two: 2, three: 3 }
     ```
 
@@ -1283,7 +1283,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     heroes[:batman] # => "Bruce Wayne"
     heroes[:supermann] # => nil
 
-    # bon - fetch génère une exception KeyError, rendant le problème évident
+    # bien - fetch génère une exception KeyError, rendant le problème évident
     heroes.fetch(:supermann)
     ```
 
@@ -1298,7 +1298,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     email_with_name = user.name + ' <' + user.email + '>'
 
-    # bon
+    # bien
     email_with_name = "#{user.name} <#{user.email}>"
     ```
 
@@ -1316,7 +1316,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     name = "Bozhidar"
 
-    # bon
+    # bien
     name = 'Bozhidar'
     ```
 
@@ -1337,7 +1337,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
         "#{@first_name} #{@last_name}"
       end
 
-      # bon
+      # bien
       def to_s
         "#@first_name #@last_name"
       end
@@ -1349,7 +1349,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
   toujours plus rapide que `String#+`, qui crée beaucoup de nouveaux objets.
 
     ```Ruby
-    # bon et rapide
+    # bien et rapide
     html = ''
     html << '<h1>Page title</h1>'
 
@@ -1381,7 +1381,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
 
     ```Ruby
     /(first|second)/   # mauvais
-    /(?:first|second)/ # bon
+    /(?:first|second)/ # bien
     ```
 
 * Evitez d'utiliser $1-9 car il peut être difficile de déterminer ce qu'ils
@@ -1393,7 +1393,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     ...
     process $1
 
-    # bon
+    # bien
     /(?<meaningful_var>regexp)/ =~ string
     ...
     process meaningful_var
@@ -1456,7 +1456,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     %(<div>\n<span class="big">#{exclamation}</span>\n</div>)
     # should be a heredoc.
 
-    # bon (interpolation, doubles guillemets, simple ligne)
+    # bien (interpolation, doubles guillemets, simple ligne)
     %(<tr><td class="name">#{name}</td>)
     ```
 
@@ -1470,7 +1470,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     %r(^/(.*)$)
     # should be /^\/(.*)$/
 
-    # bon
+    # bien
     %r(^/blog/2011/(.*)$)
     ```
 
@@ -1537,7 +1537,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       end
     end
 
-    # bon
+    # bien
     def method_missing?(meth, *args, &block)
       if /^find_by_(?<prop>.*)/ =~ meth
         find_by(prop, *args, &block)
@@ -1565,7 +1565,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     # mauvais
     $foo_bar = 1
 
-    # bon
+    # bien
     class Foo
       class << self
         attr_accessor :bar
