@@ -61,7 +61,7 @@ beaucoup de fonctionnalités. Naturellement, tout le monde est invité à partic
 
 Des traductions de ce guide sont disponibles dans les langues suivantes :
 
-* [Anglais](https://github.com/bbatsov/ruby-style-guide/blob/master/README.md)
+* [Anglais](https://github.com/bbatsov/ruby-style-guide/blob/master/README.md) (version originale)
 * [Chinois simplifié](https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhCN.md)
 * [Chinois traditionnel](https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhTW.md)
 
