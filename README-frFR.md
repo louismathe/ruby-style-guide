@@ -25,7 +25,7 @@ suggestions et votre soutien! Ensemble, nous pouvons créer une ressource
 bénéfique à tous les développeurs Ruby ici présents.
 
 Au fait, si vous faites du Rails, vous pouvez consulter le
-[Guide de style Ruby on Rails 3](https://github.com/coreye/rails-style-guide) complémentaire.
+[Guide de style Ruby on Rails 3](https://github.com/bbatsov/rails-style-guide) complémentaire.
 
 # Le guide de style Ruby
 
