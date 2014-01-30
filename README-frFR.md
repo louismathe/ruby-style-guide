@@ -122,7 +122,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
     ```
 
     L'opérateur d'exposant est la seule exception:
-    
+
     ```Ruby
     # mauvais
     e = M * c ** 2
@@ -561,8 +561,8 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
       # do something...
     end
     ```
-    
-    Bien que beaucoup de livres Ruby conseillent le premier style, le second est 
+
+    Bien que beaucoup de livres Ruby conseillent le premier style, le second est
     bien plus fréquent (et probablement un peu plus lisible).
 
 * Evitez les prolongements de lignes (\\) quand ils ne sont pas indispensables.
@@ -744,7 +744,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
   La raison pour laquelle l'utilisation de `select` est encouragée plutôt
   que `find_all` est qu'elle fonctionne bien avec `reject` et que son nom est
   relativement explicite.
-  
+
 * Utilisez `flat_map` plutôt que `map` + `flatten`.
 
     ```Ruby
@@ -818,7 +818,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
   des problèmes de performance.
 * Utilisez `HACK` pour signaler un code qui semble être issu de pratiques
   d'écriture douteuses qui devrait être refactorisé.
-* Utilisez `REVIEW` pout signaler toute chose devant être vérifiée pour confirmer
+* Utilisez `REVIEW` pour signaler toute chose devant être vérifiée pour confirmer
   qu'elle fonctionne comme prévu. Par exemple: `REVIEW: Are we sure this is how the
   client does X currently?`
 * Utilisez d'autres mots clés d'annotation personnalisés si vous considérez que c'est
