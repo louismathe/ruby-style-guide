@@ -829,7 +829,7 @@ Des traductions de ce guide sont disponibles dans les langues suivantes :
 * Quand vous concevez des hiérarchies de classes, assurez-vous qu'elles sont conformes au
   [Principe de substitution de Liskov](http://fr.wikipedia.org/wiki/Principe_de_substitution_de_Liskov).
 * Essayez de rendre vos classes aussi
-  [SOLIDES](http://en.wikipedia.org/wiki/SOLID_(object-oriented_design\))
+ <a href="http://en.wikipedia.org/wiki/SOLID_(object-oriented_design\)">SOLIDES</a>
   que possible.
 * Fournissez toujours une méthode `to_s` appropriée aux classes qui
   représentent des objets de domaine.
